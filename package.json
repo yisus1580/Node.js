@@ -1,0 +1,30 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "proyecto de jnode",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yisus1580/Node.js.git"
+  },
+  "keywords": [
+    "\"node\"",
+    "\"express\"",
+    "\"jwt\""
+  ],
+  "author": "jesus omar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yisus1580/Node.js/issues"
+  },
+  "homepage": "https://github.com/yisus1580/Node.js#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "save": "^2.4.0"
+  }
+}
