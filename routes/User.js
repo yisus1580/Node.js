@@ -3,7 +3,7 @@ const jwt= require('jsonwebtoken');
 const User = express.Router(); 
 const db =require('../config/database');
 
-User.post("",async(req, res, next)=>{
+User.post("/signin",async(req, res, next)=>{
 	const{User_name,User_email,User_password} = req.body
 
 	if (User_name&&User_email&&User_password) {
