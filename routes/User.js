@@ -20,16 +20,16 @@ User.post("/signin",async(req, res, next)=>{
 });
 
 User.post("/login", async(req, res, next) =>{
-	const{ User_email, User_password }= req.body;
+	const{ User_email, User_password } = req.body;
 	const query=`SELECT * FROM User WHERE User_email = '${User_email}' AND User_password= '${User_password}';`;
 	const rows = await db.query(query);
 
-	if (User_email&&User_password) {
+	if (User_email && User_password) {
 	if (rows.length == 1) {
 		const token= jwt.sign({
 			User_id: rows[0].User_id,
 			User_email: rows[0].User_email
-		},"debugkey");
+		}, "debugkey");
 		return res.status(200).json({ code: 200,message: token});
 	} 
 	else{ 

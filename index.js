@@ -18,8 +18,8 @@ app.use(express.urlencoded({extended:true}));
 
 app.get("/",index);
 app.use("/user",User);
-app.use(auth);
 app.use("/pokemon", pokemon);
+app.use(auth);
 app.use(notfound );
 
 app.listen(process.env.PORT || 3000,() =>{
